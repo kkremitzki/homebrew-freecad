@@ -49,7 +49,7 @@ class Freecad < Formula
    end
   end
 
-  depends_on "boost-python"
+  depends_on "pybind11"
   depends_on "xerces-c"
   depends_on "qt"
   depends_on "FreeCAD/freecad/pyside2-tools"
@@ -85,6 +85,7 @@ class Freecad < Formula
     args = std_cmake_args
     args << "-DBUILD_QT5=ON"
     args << "-DUSE_PYTHON3=1"
+    args << "-DFREECAD_USE_PYBIND11=1"
     args << "-DCMAKE_CXX_FLAGS='-std=c++14'"
     args << "-DBUILD_FEM_NETGEN=1"
     args << "-DBUILD_FEM=1"
