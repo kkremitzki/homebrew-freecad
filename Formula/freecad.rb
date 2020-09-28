@@ -95,7 +95,7 @@ class Freecad < Formula
     if build.with?("unsecured-cloud")
      args << "-DALLOW_SELF_SIGNED_CERTIFICATE=1"
     end
-    args << '-DCMAKE_PREFIX_PATH="' + Formula["qt"].opt_prefix + "/lib/cmake;" + Formula["nglib"].opt_prefix + "/Contents/Resources"
+    args << '-DCMAKE_PREFIX_PATH="' + Formula["qt"].opt_prefix + "/lib/cmake;" + Formula["kkremitzki/freecad/nglib"].opt_prefix + "/Contents/Resources"
     args << %W[
       -DBUILD_FEM_NETGEN:BOOL=ON
       -DFREECAD_USE_EXTERNAL_KDL=ON
